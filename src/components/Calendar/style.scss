@@ -1,0 +1,37 @@
+@import "~bootstrap/scss/bootstrap-utilities";
+
+.calendar-container {
+    @extend .h-100;
+    @extend .d-flex;
+    @extend .text-center;
+
+    flex-direction: column;
+
+    .d-grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .calendar-days-container {
+        flex-grow: 1;
+    }
+
+    .calendar-day-item {
+        @extend .p-2;
+        @extend .bg-white;
+
+        overflow: hidden;
+
+        &.working-day {
+            @extend .bg-light;
+        }
+        &.holiday {
+            @extend .bg-primary;
+            @extend .text-white;
+        }
+        .badge {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 100%;
+        }
+    }
+}

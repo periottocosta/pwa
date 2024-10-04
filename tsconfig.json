@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "es6", // Alternativa mais segura ao esnext
+      "moduleResolution": "node", // Para um projeto React sem Next.js
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "react-jsx", // Usar react-jsx para React 17+
+      "incremental": true,
+      "baseUrl": "./src",
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+  }
+  

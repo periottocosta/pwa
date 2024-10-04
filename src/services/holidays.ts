@@ -12,7 +12,7 @@ export const getPublicHolidays = async (
     endDate: string
 ): Promise<PublicHolidayResponse[]> => {
     try {
-        const key = `${STORAGE_KEYS.HOLIDAYS}_${country}_${subDivision}__${format(startDate, 'Y_M')}__${format(endDate, 'Y_M')}`;
+        const key = `${STORAGE_KEYS.HOLIDAYS}_${country}_${subDivision}__${format(startDate, 'y_M')}__${format(endDate, 'y_M')}`;
         const holidays = getInfo(key);
 
         if (holidays) {

@@ -12,8 +12,10 @@
         position: relative;
 
         .nav-link {
-            padding: 0 !important;
             width: 20px;
+        }
+        .nav-link svg {
+            height: 25px;
         }
     }
 }

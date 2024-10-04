@@ -95,14 +95,15 @@ const ConfigModal: React.FC<ConfigModalProps> = ({
                 <ModalBody>
                     <Form>
                         <FormGroup>
-                            <Label for="countrySelect">Country</Label>
+                            <Label for="country-select">Country</Label>
                             <Input
+                                id="country-select"
                                 type="select"
                                 onChange={(e) => {
                                     const obj = JSON.parse(e.target.value)
                                     setSelectedCountry(obj)
                                 }}
-                                defaultValue={selectedCountry?.isoCode}
+                                defaultValue={JSON.stringify(selectedCountry)}
                             >
                                 <option value="" />
                                 {countries.map((country, index) => (
@@ -117,15 +118,16 @@ const ConfigModal: React.FC<ConfigModalProps> = ({
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="subDivisionSelect">SubDivision</Label>
+                            <Label for="sub-division-select">SubDivision</Label>
                             <Input
+                                id="sub-division-select"
                                 disabled={loading || subDivisions.length === 0}
                                 type="select"
                                 onChange={(e) => {
                                     const obj = JSON.parse(e.target.value)
                                     setSelectedSubDivision(obj)
                                 }}
-                                defaultValue={selectedSubDivision?.code}
+                                defaultValue={JSON.stringify(selectedSubDivision)}
                             >
                                 {subDivisions.map((subDivision, index) => (
                                     <option

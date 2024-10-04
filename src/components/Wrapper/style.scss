@@ -1,0 +1,21 @@
+@import "~bootstrap/scss/bootstrap-utilities";
+
+.wrapper-container {
+    @extend .d-flex;
+    @extend .w-100;
+    @extend .h-100;
+
+    flex-direction: column;
+}
+
+.btn-float-config {
+    @extend .shadow;
+    @extend .rounded-circle;
+
+    position: fixed;
+    bottom: $spacer * 2;
+    right: $spacer * 2;
+    z-index: 1000;
+    width: 42px;
+    padding: 8px !important;
+}

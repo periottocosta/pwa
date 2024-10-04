@@ -1,0 +1,19 @@
+@import "~bootstrap/scss/bootstrap-utilities";
+@import "../../styles/variables.scss";
+
+.navbar-expand {
+    color: $white;
+    background-color: $primary;
+
+    svg {
+        color: $white;
+    }
+    .navbar-nav {
+        position: relative;
+
+        .nav-link {
+            padding: 0 !important;
+            width: 20px;
+        }
+    }
+}
